@@ -1,6 +1,7 @@
 import { Container, Grid, SimpleGrid, Skeleton, Image, Group, Text } from '@mantine/core';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import TimeLine from './TimeLine';
 const PRIMARY_COL_HEIGHT = '300px';
 
 
@@ -17,10 +18,11 @@ function Home() {
   let [imagePosition, setImagePosition] = useState(0);
   
   const handleImageClick = () => {
-    if(imagePosition<=images.length){
+    if(imagePosition<images.length-1){
     imagePosition++;
     setImagePosition(imagePosition)
-    setSelectedImage(images[imagePosition]) //setTimeOut & setInterval
+    setSelectedImage(images[imagePosition])
+    console.log(imagePosition)
     }
     else{
       imagePosition=0
@@ -29,9 +31,10 @@ function Home() {
   }
   
   useEffect(() => {
-    const interval = setInterval(handleImageClick, 5000); // Call the function every 5 seconds
-    return () => clearInterval(interval); // Cleanup the interval on component unmount
+    const interval = setInterval(handleImageClick,3000); 
+    return () => clearInterval(interval);
   }, [imagePosition, images]);
+ 
 
   return (
     <Container my="md">
@@ -52,7 +55,7 @@ function Home() {
             </Group>
         <Grid gutter="md">
           <Grid.Col>
-            <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />
+            <TimeLine />
           </Grid.Col>
           <Grid.Col span={6}>
             <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />

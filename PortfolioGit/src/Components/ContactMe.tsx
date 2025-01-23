@@ -1,24 +1,26 @@
 import { Button, Checkbox, Group, TextInput } from '@mantine/core';
-import { useForm } from '@mantine/form';
-
+import { useForm } from '@mantine/form'; 
 function ContactMe() {
   const form = useForm({
     mode: 'uncontrolled',
-    initialValues: {
+    initialValues: { 
       email: '',
       fullName: '',
       phoneNumber: '',
       contactReason: '',
       termsOfService: false,
     },
-
+    
+    
     validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'), 
     },
   });
-
+  
+  
+  
   return (
-    <form onSubmit={form.onSubmit((values) => console.log(values))}>
+    <form onSubmit={form.onSubmit((values) => console.log(values))}> 
       <TextInput
         withAsterisk
         label="Full Name"
