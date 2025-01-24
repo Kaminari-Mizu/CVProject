@@ -3,7 +3,7 @@ import { IconVideo } from '@tabler/icons-react';
 
 function TimeLine() {
   return (
-    <Timeline color="green" active={3} lineWidth={2} bulletSize={31} >
+    <Timeline color="green" active={3} lineWidth={2} bulletSize={31}>
       <Timeline.Item title="Default bullet">
         <Text c="dimmed" size="sm">
           Default bullet without anything
