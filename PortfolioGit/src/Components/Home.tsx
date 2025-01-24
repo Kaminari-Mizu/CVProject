@@ -3,18 +3,13 @@ import { Container, Grid, SimpleGrid, Skeleton, Group, Text } from '@mantine/cor
 //import { useEffect } from 'react';
 import TimeLine from './TimeLine';
 import Carousel from './Carousel';
-const PRIMARY_COL_HEIGHT = '300px';
+import Data from '../assets/data.json';
 
+const PRIMARY_COL_HEIGHT = '300px';
 
 function Home() {
   const SECONDARY_COL_HEIGHT = `calc(${PRIMARY_COL_HEIGHT} / 2 - var(--mantine-spacing-md) / 2)`;
-  const images = [
-    "src/assets/profilePic.png",
-    "src/assets/gintoki.png",
-    "src/assets/roxas.jpg",
-    "src/assets/myf.png",
-    "src/assets/ffv.jpg",
-  ];
+  const images = Data.images;
   
 
   return (
