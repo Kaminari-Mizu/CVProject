@@ -1,8 +1,8 @@
-
+import { FeaturesTitle } from "./FeaturesTitle"
 
 function Details() {
     return (
-      <div>Details</div>
+      <div><FeaturesTitle/></div>
     )
   }
   

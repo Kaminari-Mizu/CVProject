@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useEffect } from 'react';
 import { Burger, Container, Group, Transition, Paper } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Link, useLocation } from 'react-router-dom';
@@ -15,6 +16,11 @@ export function HeaderSimple() {
   const [opened, { toggle }] = useDisclosure(false);
   const location = useLocation();
   const [active, setActive] = useState(location.pathname);
+
+  useEffect(() => {
+    setActive(location.pathname);
+  }, [location.pathname]);
+
 
   const items = links.map((link) => (
     <Link
