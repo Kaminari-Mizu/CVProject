@@ -5,6 +5,37 @@
       "src/assets/roxas.jpg",
       "src/assets/myf.png",
       "src/assets/ffv.jpg"
+    ],
+    "groceries": [
+      {
+        "emoji": "🍎",
+        "value": "Apples",
+        "description": "Crisp and refreshing fruit. Apples are known for their versatility and nutritional benefits. They come in a variety of flavors and are great for snacking, baking, or adding to salads."
+      },
+      {
+        "emoji": "🍌",
+        "value": "Bananas",
+        "description": "Naturally sweet and potassium-rich fruit. Bananas are a popular choice for their energy-boosting properties and can be enjoyed as a quick snack, added to smoothies, or used in baking."
+      },
+      {
+        "emoji": "🥦",
+        "value": "Broccoli",
+        "description": "Nutrient-packed green vegetable. Broccoli is packed with vitamins, minerals, and fiber. It has a distinct flavor and can be enjoyed steamed, roasted, or added to stir-fries."
+      }
+    ],
+
+   "mockdata": {
+    "image": "https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
+    "title": "Verudela Beach",
+    "country": "Croatia",
+    "description": "Completely renovated for the season 2020, Arena Verudela Beach Apartments are fully equipped and modernly furnished 4-star self-service apartments located on the Adriatic coastline by one of the most beautiful beaches in Pula.",
+    "badges": [
+      { "emoji": "☀️", "label": "Sunny weather" },
+      { "emoji": "🦓", "label": "Onsite zoo" },
+      { "emoji": "🌊", "label": "Sea" },
+      { "emoji": "🌲", "label": "Nature" },
+      { "emoji": "🤽", "label": "Water sports" }
     ]
+  }
   }
   

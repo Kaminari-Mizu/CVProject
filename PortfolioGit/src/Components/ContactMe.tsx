@@ -1,67 +1,67 @@
-import { Button, Checkbox, Group, TextInput } from '@mantine/core';
-import { useForm } from '@mantine/form'; 
+import { Button, Checkbox, Group, TextInput } from '@mantine/core'; // Importing components from Mantine library
+import { useForm } from '@mantine/form'; // Importing useForm hook from Mantine for handling form state
+
 function ContactMe() {
+  // Initializing the form using the useForm hook
   const form = useForm({
-    mode: 'uncontrolled',
-    initialValues: { 
+    mode: 'uncontrolled', // Form mode (uncontrolled means no initial form values are set until user interacts)
+    initialValues: { // Setting the initial values for each form field
       email: '',
       fullName: '',
       phoneNumber: '',
       contactReason: '',
-      termsOfService: false,
+      termsOfService: false, // Default value for the terms of service checkbox
     },
     
-    
+    // Validation rules for form fields
     validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'), 
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'), // Basic email validation (checks if it matches the email pattern)
     },
   });
   
-  
-  
   return (
-    <form onSubmit={form.onSubmit((values) => console.log(values))}> 
+    <form onSubmit={form.onSubmit((values) => console.log(values))}> {/* Form submission handler that logs form values */}
       <TextInput
-        withAsterisk
-        label="Full Name"
-        placeholder="your full name"
-        key={form.key('fullName')}
-        {...form.getInputProps('fullName')}
+        withAsterisk // Adding asterisk to indicate required field
+        label="Full Name" // Label for the full name field
+        placeholder="your full name" // Placeholder text for the full name field
+        key={form.key('fullName')} // Unique key for the input field (ensures proper re-rendering)
+        {...form.getInputProps('fullName')} // Binding form state to the input field
       />
       <TextInput
-        withAsterisk
-        label="Email"
-        placeholder="your@email.com"
-        key={form.key('email')}
-        {...form.getInputProps('email')}
+        withAsterisk // Adding asterisk to indicate required field
+        label="Email" // Label for the email field
+        placeholder="your@email.com" // Placeholder text for the email field
+        key={form.key('email')} // Unique key for the input field
+        {...form.getInputProps('email')} // Binding form state to the input field
       />
       <TextInput
-        withAsterisk
-        label="Phone Number"
-        placeholder="your phone number"
-        key={form.key('phoneNumber')}
-        {...form.getInputProps('phoneNumber')}
+        withAsterisk // Adding asterisk to indicate required field
+        label="Phone Number" // Label for the phone number field
+        placeholder="your phone number" // Placeholder text for the phone number field
+        key={form.key('phoneNumber')} // Unique key for the input field
+        {...form.getInputProps('phoneNumber')} // Binding form state to the input field
       />
       <TextInput
-        withAsterisk
-        label="Reason for Contact"
-        placeholder="details"
-        key={form.key('contactReason')}
-        {...form.getInputProps('contactReason')}
+        withAsterisk // Adding asterisk to indicate required field
+        label="Reason for Contact" // Label for the contact reason field
+        placeholder="details" // Placeholder text for the contact reason field
+        key={form.key('contactReason')} // Unique key for the input field
+        {...form.getInputProps('contactReason')} // Binding form state to the input field
       />
 
       <Checkbox
-        mt="md"
-        label="I agree to hire this person regardless of their qualifications"
-        key={form.key('termsOfService')}
-        {...form.getInputProps('termsOfService', { type: 'checkbox' })}
+        mt="md" // Margin-top for spacing
+        label="I agree to hire this person regardless of their qualifications" // Label for the checkbox
+        key={form.key('termsOfService')} // Unique key for the checkbox field
+        {...form.getInputProps('termsOfService', { type: 'checkbox' })} // Binding form state to the checkbox
       />
 
-      <Group justify="flex-end" mt="md">
-        <Button type="submit">Submit</Button>
+      <Group justify="flex-end" mt="md"> {/* Grouping the submit button on the right */}
+        <Button type="submit">Submit</Button> {/* Submit button for the form */}
       </Group>
     </form>
   );
 }
 
-export default ContactMe
+export default ContactMe; // Exporting the ContactMe component for use in other parts of the application

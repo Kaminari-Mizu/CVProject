@@ -1,50 +1,44 @@
 import { Container, Grid, SimpleGrid, Group, Text } from '@mantine/core';
-import TimeLine from './TimeLine';
-import Carousel from './Carousel';
-import Data from '../assets/data.json';
-import { BadgeCard } from './BadgeCard';
+import TimeLine from './TimeLine'; // Importing a custom `TimeLine` component
+import Carousel from './Carousel'; // Importing a custom `Carousel` component
+import Data from '../assets/data.json'; // Importing data from a JSON file
+import { BadgeCard } from './BadgeCard'; // Importing the reusable `BadgeCard` component
 
-const mockdata = {
-    image:
-      'https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
-    title: 'Verudela Beach',
-    country: 'Croatia',
-    description:
-      'Completely renovated for the season 2020, Arena Verudela Bech Apartments are fully equipped and modernly furnished 4-star self-service apartments located on the Adriatic coastline by one of the most beautiful beaches in Pula.',
-    badges: [
-      { emoji: '☀️', label: 'Sunny weather' },
-      { emoji: '🦓', label: 'Onsite zoo' },
-      { emoji: '🌊', label: 'Sea' },
-      { emoji: '🌲', label: 'Nature' },
-      { emoji: '🤽', label: 'Water sports' },
-    ],
-  };
-
+// The main `Home` component
 function Home() {
- // const SECONDARY_COL_HEIGHT = `calc(${PRIMARY_COL_HEIGHT} / 2 - var(--mantine-spacing-md) / 2)`;
+  // Extracting the `images` array and `mockdata` object from the imported JSON file
   const images = Data.images;
-  
+  const dataCard = Data.mockdata;
 
   return (
+    // Container to wrap and center the content with padding/margins
     <Container my="md">
+      {/* SimpleGrid ensures layout is responsive with specified column settings */}
       <SimpleGrid cols={{ base: 1, sm: 1 }} spacing="sm">
-           <Group align='center' gap="sm" grow>
-                <Carousel images={images}/>
-                <Text size='md' ta="right" fw={500} lineClamp={3}>
-                    Something something somehting checking
-                    Awe it worksafddddddsssssssssssssssssssssssssssssssssssssss
-                    ssssssssssssssssssssssssssss
-                </Text>
-            </Group>
+        {/* Group aligns items horizontally with spacing */}
+        <Group align="center" gap="sm" grow>
+          {/* Passing the images array to the Carousel component */}
+          <Carousel images={images} />
+          {/* A block of text that displays some placeholder content */}
+          <Text size="md" ta="right" fw={500} lineClamp={3}>
+            Something something something checking
+            Awe it worksafddddddsssssssssssssssssssssssssssssssssssssss
+            ssssssssssssssssssssssssssss
+          </Text>
+        </Group>
+
+        {/* Grid layout to display components in a structured way */}
         <Grid gutter="md">
           <Grid.Col>
+            {/* Rendering the TimeLine component */}
             <TimeLine />
           </Grid.Col>
+          {/* Using BadgeCard with data from the JSON file, navigating to different routes */}
           <Grid.Col span={6}>
-            <BadgeCard {...mockdata} url="/details"/>
+            <BadgeCard {...dataCard} url="/details" />
           </Grid.Col>
           <Grid.Col span={6}>
-          <BadgeCard {...mockdata} url="/hobbies"/>
+            <BadgeCard {...dataCard} url="/hobbies" />
           </Grid.Col>
         </Grid>
       </SimpleGrid>
@@ -52,4 +46,5 @@ function Home() {
   );
 }
 
+// Exporting the `Home` component as the default export
 export default Home;
