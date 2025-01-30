@@ -1,7 +1,8 @@
+import Background from "./Background"
 
 function Hobbies() {
     return (
-      <div>Hobbies</div>
+      <Background/>
     )
   }
   

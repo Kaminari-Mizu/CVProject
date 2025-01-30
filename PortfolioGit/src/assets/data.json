@@ -6,6 +6,9 @@
       "src/assets/myf.png",
       "src/assets/ffv.jpg"
     ],
+
+    "video": "src/assets/nioh2liv.mp4",
+
     "groceries": [
       {
         "emoji": "🍎",
