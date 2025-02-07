@@ -7,23 +7,27 @@ import { BadgeCard } from './BadgeCard'; // Importing the reusable `BadgeCard` c
 // The main `Home` component
 function Home() {
   // Extracting the `images` array and `mockdata` object from the imported JSON file
-  const images = Data.images;
-  const dataCard = Data.mockdata;
+  //const images = Data.images;
+  const detailsCard = Data.detailsdata;
+  const hobbiesCard = Data.hobbiesdata;
+  console.log({detailsCard})
 
   return (
     // Container to wrap and center the content with padding/margins
     <Container my="md">
       {/* SimpleGrid ensures layout is responsive with specified column settings */}
-      <SimpleGrid cols={{ base: 1, sm: 1 }} spacing="sm">
+      <SimpleGrid cols={{ base: 1, sm: 1 }} spacing="md">
         {/* Group aligns items horizontally with spacing */}
         <Group align="center" gap="sm" grow>
           {/* Passing the images array to the Carousel component */}
-          <Carousel images={images} />
+          
+          <Carousel />
           {/* A block of text that displays some placeholder content */}
           <Text size="md" ta="right" fw={500} lineClamp={3}>
-            Something something something checking
-            Awe it worksafddddddsssssssssssssssssssssssssssssssssssssss
-            ssssssssssssssssssssssssssss
+          Hi I am Jason Saal. I am a complex problem-solver with an analytical and driven mindset. 
+          I am dedicated to achieving demanding development objectives according 
+          to tight schedules while producing impeccable code using my the experience I have gained
+          in various programming langauges..
           </Text>
         </Group>
 
@@ -35,10 +39,10 @@ function Home() {
           </Grid.Col>
           {/* Using BadgeCard with data from the JSON file, navigating to different routes */}
           <Grid.Col span={6}>
-            <BadgeCard {...dataCard} url="/details" />
+            <BadgeCard {...detailsCard} url="/details" />
           </Grid.Col>
           <Grid.Col span={6}>
-            <BadgeCard {...dataCard} url="/hobbies" />
+            <BadgeCard {...hobbiesCard} url="/hobbies" />
           </Grid.Col>
         </Grid>
       </SimpleGrid>

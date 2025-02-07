@@ -1,49 +1,179 @@
 import { Timeline, Text, Avatar, ThemeIcon } from '@mantine/core';  // Importing components from Mantine library
-import { IconVideo } from '@tabler/icons-react';  // Importing video icon from Tabler Icons
+import { IconDeviceDesktopSearch, IconHeart, IconHome, IconSchool, IconShoppingBag } from '@tabler/icons-react';  // Importing video icon from Tabler Icons
+import Avatars from '../assets/ProfilePic.png';
 
 // TimeLine functional component
 function TimeLine() {
   return (
-    <Timeline color="green" active={3} lineWidth={2} bulletSize={31}>
-      
-      <Timeline.Item title="Default bullet">
-        <Text c="dimmed" size="sm">  
-          Default bullet without anything
-        </Text>
-      </Timeline.Item>
+    <Timeline color="green" active={3} lineWidth={2} bulletSize={30}>
 
       <Timeline.Item
-        title="Avatar"
         bullet={  
           <Avatar
-            size={22}  // Avatar size set to 22 pixels
+            size={40}  // Avatar size set to 22 pixels
             radius="xl"  // Extra-large radius for a rounded avatar
-            src="https://avatars0.githubusercontent.com/u/10353856?s=460&u=88394dfd67727327c1f7670a1764dc38a8a24831&v=4"  // Avatar image URL
+            src= {Avatars}  // Avatar image URL
           />
         }
       >
-        <Text c="dimmed" size="sm">  
-          Timeline bullet as avatar image
+        <Text size="sm">  
+         Born 9 April 1999 in Worcester
         </Text>
       </Timeline.Item>
 
-      <Timeline.Item
-        title="ThemeIcon" 
+      <Timeline.Item 
         bullet={ 
           <ThemeIcon
-            size={22}  // ThemeIcon size set to 22 pixels
+            size={40}  // ThemeIcon size set to 22 pixels
             variant="gradient"  // Gradient variant for the ThemeIcon
             gradient={{ from: 'lime', to: 'cyan' }}  // Gradient colors: lime to cyan
             radius="xl"  // Extra-large radius for rounded corners
           >
-            <IconVideo size={13} />  {/* Video icon inside the ThemeIcon */}
+            <IconHome size={21} />  {/* Video icon inside the ThemeIcon */}
+          </ThemeIcon>
+        }
+        >
+        <Text size="sm">  
+          Moved to Kuils River in 2004
+        </Text>
+      </Timeline.Item>
+
+      <Timeline.Item
+        bullet={ 
+          <ThemeIcon
+            size={40}  // ThemeIcon size set to 22 pixels
+            variant="gradient"  // Gradient variant for the ThemeIcon
+            gradient={{ from: 'lime', to: 'cyan' }}  // Gradient colors: lime to cyan
+            radius="xl"  // Extra-large radius for rounded corners
+          >
+            <IconSchool size={21} />  {/* Video icon inside the ThemeIcon */}
           </ThemeIcon>
         }
       >
-        <Text c="dimmed" size="sm">  {/* Text component with description */}
-          Timeline bullet as ThemeIcon component
+        <Text size="sm">  {/* Text component with description */}
+          Started school at Mikro Primary in 2005-2012
         </Text>
       </Timeline.Item>
+
+      <Timeline.Item 
+        bullet={ 
+          <ThemeIcon
+            size={40}  // ThemeIcon size set to 22 pixels
+            variant="gradient"  // Gradient variant for the ThemeIcon
+            gradient={{ from: 'lime', to: 'cyan' }}  // Gradient colors: lime to cyan
+            radius="xl"  // Extra-large radius for rounded corners
+          >
+            <IconSchool size={21} />  {/* Video icon inside the ThemeIcon */}
+          </ThemeIcon>
+        }
+      >
+        <Text size="sm">  {/* Text component with description */}
+          Went to De Kuilen High School from 2013-2017
+        </Text>
+      </Timeline.Item>
+
+      <Timeline.Item 
+        bullet={ 
+          <ThemeIcon
+            size={40}  // ThemeIcon size set to 22 pixels
+            variant="gradient"  // Gradient variant for the ThemeIcon
+            gradient={{ from: 'lime', to: 'cyan' }}  // Gradient colors: lime to cyan
+            radius="xl"  // Extra-large radius for rounded corners
+          >
+            <IconSchool size={21} />  {/* Video icon inside the ThemeIcon */}
+          </ThemeIcon>
+        }
+      >
+        <Text size="sm">  {/* Text component with description */}
+          From 2018-2019 studied Electrical and Electronic Engineering at Stellenbosch University
+        </Text>
+      </Timeline.Item>
+
+      <Timeline.Item 
+        bullet={ 
+          <ThemeIcon
+            size={40}  // ThemeIcon size set to 22 pixels
+            variant="gradient"  // Gradient variant for the ThemeIcon
+            gradient={{ from: 'lime', to: 'cyan' }}  // Gradient colors: lime to cyan
+            radius="xl"  // Extra-large radius for rounded corners
+          >
+            <IconSchool size={21} />  {/* Video icon inside the ThemeIcon */}
+          </ThemeIcon>
+        }
+      >
+        <Text size="sm">  {/* Text component with description */}
+          Went to Cape Peninsula University of Technology to study Computer Engineering from 2021-2023
+        </Text>
+      </Timeline.Item>
+
+      <Timeline.Item
+        bullet={ 
+          <ThemeIcon
+            size={40}  // ThemeIcon size set to 22 pixels
+            variant="gradient"  // Gradient variant for the ThemeIcon
+            gradient={{ from: 'lime', to: 'cyan' }}  // Gradient colors: lime to cyan
+            radius="xl"  // Extra-large radius for rounded corners
+          >
+            <IconShoppingBag size={21} />  {/* Video icon inside the ThemeIcon */}
+          </ThemeIcon>
+        }
+      >
+        <Text size="sm">  {/* Text component with description */}
+          For a short period, worked as a Part-Time Sales Assistant at Studio 88 Kuils River in 2023
+        </Text>
+      </Timeline.Item>
+
+      <Timeline.Item
+        bullet={ 
+          <ThemeIcon
+            size={40}  // ThemeIcon size set to 22 pixels
+            variant="gradient"  // Gradient variant for the ThemeIcon
+            gradient={{ from: 'lime', to: 'cyan' }}  // Gradient colors: lime to cyan
+            radius="xl"  // Extra-large radius for rounded corners
+          >
+            <IconShoppingBag size={21} />  {/* Video icon inside the ThemeIcon */}
+          </ThemeIcon>
+        }
+      >
+        <Text size="sm">  {/* Text component with description */}
+          Worked as a Part-Time Sales Assistant at Outdoor Warehouse Hermanus for a few months in 2024
+        </Text>
+      </Timeline.Item>
+
+      <Timeline.Item
+        bullet={ 
+          <ThemeIcon
+            size={40}  // ThemeIcon size set to 22 pixels
+            variant="gradient"  // Gradient variant for the ThemeIcon
+            gradient={{ from: 'lime', to: 'cyan' }}  // Gradient colors: lime to cyan
+            radius="xl"  // Extra-large radius for rounded corners
+          >
+            <IconDeviceDesktopSearch size={21} />  {/* Video icon inside the ThemeIcon */}
+          </ThemeIcon>
+        }
+      >
+        <Text size="sm">  {/* Text component with description */}
+         Did a Software Developer Internship at 1Nebula in 2025
+        </Text>
+      </Timeline.Item>
+
+      <Timeline.Item
+        bullet={ 
+          <ThemeIcon
+            size={40}  // ThemeIcon size set to 22 pixels
+            variant="gradient"  // Gradient variant for the ThemeIcon
+            gradient={{ from: 'lime', to: 'cyan' }}  // Gradient colors: lime to cyan
+            radius="xl"  // Extra-large radius for rounded corners
+          >
+            <IconHeart size={21} />  {/* Video icon inside the ThemeIcon */}
+          </ThemeIcon>
+        }
+      >
+        <Text size="sm">  {/* Text component with description */}
+          Got married in 2025
+        </Text>
+      </Timeline.Item>
+
     </Timeline>
   );
 }

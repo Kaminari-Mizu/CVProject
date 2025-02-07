@@ -4,9 +4,11 @@ import classes from './StatsSegments.module.css'; // Importing custom CSS module
 
 // Data representing the statistics for mobile, desktop, and tablet usage
 const data = [
-  { label: 'Mobile', count: '204,001', part: 59, color: '#47d6ab' }, // Mobile usage data
-  { label: 'Desktop', count: '121,017', part: 35, color: '#03141a' }, // Desktop usage data
-  { label: 'Tablet', count: '31,118', part: 6, color: '#4fcdf7' }, // Tablet usage data
+  { label: 'Java', part: 30, color: '#47d6ab' }, // Mobile usage data
+  { label: 'C#', part: 20, color: '#03141a' }, // Desktop usage data
+  { label: 'React TypeScript', part: 20, color: 'green' },
+  { label: 'SQL', part: 15, color: 'red' },  // Tat usage data
+  { label: 'C', part: 15, color: 'grey' }, 
 ];
 
 // StatsSegments functional component
@@ -14,7 +16,7 @@ export function StatsSegments() {
   // Mapping through the data to create segments for progress bars
   const segments = data.map((segment) => (
     <Progress.Section value={segment.part} color={segment.color} key={segment.color}> {/* Creating a progress section for each segment */}
-      {segment.part > 10 && <Progress.Label>{segment.part}%</Progress.Label>} {/* Showing percentage label if part > 10 */}
+      {<Progress.Label>{segment.part}%</Progress.Label>}
     </Progress.Section>
   ));
 
@@ -26,7 +28,7 @@ export function StatsSegments() {
       </Text>
 
       <Group justify="space-between" align="flex-end" gap={0}> {/* Grouping the stat count and percentage */}
-        <Text fw={700}>{stat.count}</Text> {/* Displaying the count */}
+        <Text fw={700}></Text> {/* Displaying the count */}
         <Text c={stat.color} fw={700} size="sm" className={classes.statCount}> {/* Displaying percentage in the stat's color */}
           {stat.part}% {/* Displaying the stat's percentage */}
         </Text>
@@ -48,9 +50,6 @@ export function StatsSegments() {
         <IconDeviceAnalytics size={22} className={classes.icon} stroke={1.5} /> {/* Icon representing analytics */}
       </Group>
 
-      <Text c="dimmed" fz="sm"> {/* Subtitle explaining the stats */}
-        Page views compared to previous month
-      </Text>
 
       <Progress.Root size={34} classNames={{ label: classes.progressLabel }} mt={40}> {/* Progress bar container */}
         {segments} {/* Rendering the progress bar segments */}

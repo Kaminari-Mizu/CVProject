@@ -27,18 +27,32 @@
       }
     ],
 
-   "mockdata": {
-    "image": "https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
-    "title": "Verudela Beach",
-    "country": "Croatia",
-    "description": "Completely renovated for the season 2020, Arena Verudela Beach Apartments are fully equipped and modernly furnished 4-star self-service apartments located on the Adriatic coastline by one of the most beautiful beaches in Pula.",
+   "detailsdata": {
+    "image": "src/assets/WorkStock.jpg",
+    "title": "Experience Summary",
+    "country": "South Africa",
+    "description": "Graduated CPUT with a Bachelors in Computer Engineering. Part-time sales Assistant at Studio 88 and Outdoor Warehouse. Software Developer Internship at 1Nebula.",
     "badges": [
-      { "emoji": "☀️", "label": "Sunny weather" },
-      { "emoji": "🦓", "label": "Onsite zoo" },
-      { "emoji": "🌊", "label": "Sea" },
-      { "emoji": "🌲", "label": "Nature" },
-      { "emoji": "🤽", "label": "Water sports" }
+      { "emoji": "🛒", "label": "Part-time Sales Assistant: Studio 88" },
+      { "emoji": "🛒", "label": "Part-time Sales Assistant: Outdoor Warehouse" },
+      { "emoji": "💻", "label": "Software Developer Internship: 1Nebula" },
+      { "emoji": "🎓", "label": "CPUT Graduate in Computer Engineering" }
+    ]
+  },
+  
+  "hobbiesdata": {
+    "image": "src/assets/roxas.jpg",
+    "title": "Hobbies Summary",
+    "country": "South Africa",
+    "description": "Playing Video games, Camping, Socializing, Watching series, Reading",
+    "badges": [
+      { "emoji": "🎮", "label": "Video Games" },
+      { "emoji": "🏕️", "label": "Camping" },
+      { "emoji": "🥳", "label": "Socializing" },
+      { "emoji": "🍿", "label": "Watching series" },
+      { "emoji": "📖", "label": "Reading" }
     ]
   }
   }
+  
   

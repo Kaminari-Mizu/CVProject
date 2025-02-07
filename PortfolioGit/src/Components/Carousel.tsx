@@ -1,19 +1,34 @@
 import { useState } from "react"; // Importing useState hook for managing component state
 import { useEffect } from "react"; // Importing useEffect hook for side effects
 import { Image } from "@mantine/core"; // Importing Image component from Mantine for displaying images
+import useFetch from "../useFetch";
 
 // Defining the interface for Carousel props
-interface CarouselProps {
-  images: string[]; // An array of image URLs to display in the carousel
-}
+
+
+// interface CarouselProps {
+//   images: string[]; // An array of image URLs to display in the carousel
+// }
 
 // Carousel functional component
-function Carousel({ images }: CarouselProps) {
+function Carousel() {
+  const [data] = useFetch('http://localhost:5260/Carousel')
+
+const images = data.map((item) => Object.values(item)[1]);
+//Map function creates a new array by looping over each item in the given array (in this case data)
+//and applying a given function (everything after =>) to each entry
+//item is essentially just a variable to represent each array entry (like a function argument)
+//Object.values(item) extracts just the values of the data array (ignoring keys)
+//[1] means I'm extracting the second value and not the first. In this case, I know the array has two values
+// 'key' and 'value' (key in this case is my own given value and not actually the assigned key ID)
+//So in conclusion, the above line extracts the second value from the data array and creates a new array with just those values
+
   // State to track the currently selected image
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   // State to track the current position of the image in the array
   let [imagePosition, setImagePosition] = useState(0);
+
 
   // Function to handle image click events
   const handleImageClick = () => {
@@ -38,6 +53,8 @@ function Carousel({ images }: CarouselProps) {
 
   // Returning the Image component with the selected image
   return (
+    < >
+    
     <Image
       radius="500px" // Styling: setting the border radius of the image
       h={500} // Styling: setting the height of the image
@@ -46,6 +63,7 @@ function Carousel({ images }: CarouselProps) {
       src={selectedImage} // Source of the image to display
       onClick={handleImageClick} // Attach the click handler to change the image
     />
+    </>
   );
 }
 
