@@ -4,7 +4,7 @@ import { HeaderSimple } from "./Components/HeaderSimple"
 import Home from "./Components/Home"
 import Details from "./Components/Details"
 import Hobbies from "./Components/Hobbies"
-import ContactMe from "./Components/ContactMe"
+import  GetInTouch  from "./Components/GetInTouch"
 import { MantineProvider, useMantineColorScheme, Button, Group } from '@mantine/core'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
        <Route path="/" element={<Home />}/>
        <Route path="/details" element={<Details />}/>
        <Route path="/Hobbies" element={<Hobbies />}/>
-       <Route path="/ContactMe" element={<ContactMe />}/>
+       <Route path="/GetInTouch" element={<GetInTouch />}/>
        </Routes>
        <FooterSocial/>
        <Group>

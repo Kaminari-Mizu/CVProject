@@ -10,7 +10,7 @@ const links = [
   { link: '/', label: 'Home' },
   { link: '/details', label: 'Details' },
   { link: '/Hobbies', label: 'Hobbies' },
-  { link: '/ContactMe', label: 'Contact Me' },
+  { link: '/GetInTouch', label: 'Contact Me' },
 ];
 
 // Functional component for the header
