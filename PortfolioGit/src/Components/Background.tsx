@@ -1,8 +1,12 @@
-import { Center, Text, Box } from "@mantine/core";
+import { Center, Box } from "@mantine/core";
+import React from "react";
 import Data from '../assets/data.json';
+interface BackgroundProps {
+  children: React.ReactNode; // Explicitly define the children prop
+}
 
-function Background() {
-    const vid = Data.video
+const Background: React.FC<BackgroundProps> = ({ children }) => {
+  const vid = Data.video;
   return (
     <Box
       style={{
@@ -45,12 +49,10 @@ function Background() {
           textAlign: "center",
         }}
       >
-        <Text>
-          Background video component can be used for hero sections and other
-          immersive experiences.
-        </Text>
+        {children}
       </Center>
     </Box>
+    
   );
 }
 

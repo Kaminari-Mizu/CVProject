@@ -1,31 +1,38 @@
-import { IconCircleDotted, IconFileCode, IconFlame, IconReceiptOff } from '@tabler/icons-react'; // Importing icons from Tabler Icons
-import { Button, Grid, SimpleGrid, Text, ThemeIcon, Title } from '@mantine/core'; // Importing components from Mantine library
+import { IconDeviceDesktop, IconSchool, IconShoppingCart } from '@tabler/icons-react'; // Importing icons from Tabler Icons
+import { Grid, SimpleGrid, Text, ThemeIcon, Title, Image } from '@mantine/core'; // Importing components from Mantine library
 import classes from './FeaturesTitle.module.css'; // Importing custom CSS module for styling
-
+import Images from '../assets/WorkStock.jpg';
 // Defining the features array with each feature having an icon, title, and description
 const features = [
   {
-    icon: IconReceiptOff,
-    title: 'Free and open source',
-    description: 'All packages are published under MIT license, you can use Mantine in any project',
+    icon: IconSchool,
+    title: 'De Kuilen High School',
+    description: 'From 2013 - 2017 I went to De Kuilen High School and matriculated in the top 10 of my grade with 8 distinctions in: Afrikaans Huistaal, English Home Language, Accounting, Physical Sciences, Mathematics, Geography, Life Sciences, and Life Orientation',
   },
   {
-    icon: IconFileCode,
-    title: 'TypeScript based',
-    description: 'Build type safe applications, all components and hooks export types',
+    icon: IconSchool,
+    title: 'Stellenbosch University',
+    description: 'Did two years at Stellies from 2018-2019 in their Electrical and Electronic Engineering program before switching to CPUT in 2021 (after Covid)',
   },
   {
-    icon: IconCircleDotted,
-    title: 'No annoying focus ring',
+    icon: IconSchool,
+    title: 'Cape Peninsula University of Technology',
     description:
-      'With new :focus-visible selector focus ring will appear only when user navigates with keyboard',
+      'Studied at CPUT in Computer Engineering from 2021-2023 and graduated with a Bachelors Degree and an average grade of 81% across all 3 years',
   },
   {
-    icon: IconFlame,
-    title: 'Flexible',
+    icon: IconShoppingCart,
+    title: 'Studio 88 and Outdoor Warehouse',
     description:
-      'Customize colors, spacing, shadows, fonts and many other settings with global theme object',
+      'Worked for a short time as a part-time sales assistant at Studio 88 in Kuils River and Outdoor Warehouse Hermanus where I improved my customer service and other soft skills. One and four months respectively',
   },
+  {
+    icon: IconDeviceDesktop,
+    title: '1 Nebula Software Developer Internship',
+    description:
+      'Did a year long Software Developer Internship where I honed my programming skills in React, TypeScript, C#, SQL, and working with Microsoft Azure',
+  },
+  
 ];
 
 // FeaturesTitle functional component
@@ -55,22 +62,9 @@ export function FeaturesTitle() {
       <Grid gutter={80}> {/* Grid layout with gutter spacing */}
         <Grid.Col span={{ base: 12, md: 5 }}> {/* Grid column for left content */}
           <Title className={classes.title} order={2}> {/* Title with custom styling */}
-            A fully featured React components library for your next project
+            Education and Work Experience
           </Title>
-          <Text c="dimmed"> {/* Description text with dimmed color */}
-            Build fully functional accessible web applications faster than ever – Mantine includes
-            more than 120 customizable components and hooks to cover you in any situation
-          </Text>
-
-          <Button
-            variant="gradient" // Gradient button style
-            gradient={{ deg: 133, from: 'blue', to: 'cyan' }} // Gradient color scheme for the button
-            size="lg" // Large button size
-            radius="md" // Medium rounded corners for the button
-            mt="xl" // Extra-large margin-top for spacing
-          >
-            Get started {/* Button label */}
-          </Button>
+         <Image radius="md"src={Images}/>
         </Grid.Col>
         <Grid.Col span={{ base: 12, md: 7 }}> {/* Grid column for feature items */}
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing={30}> {/* Simple grid layout */}

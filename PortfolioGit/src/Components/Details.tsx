@@ -3,7 +3,7 @@ import { FeaturesTitle } from "./FeaturesTitle"
 import { StatsSegments } from "./StatsSegments";
 import Data from '../assets/data.json';
 
-const listItems = Data.groceries;
+const listItems = Data.achievements;
 
 
 function Details() {

@@ -9,21 +9,51 @@
 
     "video": "src/assets/nioh2liv.mp4",
 
-    "groceries": [
+    "achievements": [
       {
-        "emoji": "🍎",
-        "value": "Apples",
-        "description": "Crisp and refreshing fruit. Apples are known for their versatility and nutritional benefits. They come in a variety of flavors and are great for snacking, baking, or adding to salads."
+        "emoji": "💯",
+        "value": "Goal Oriented",
+        "description": "I always put in maximum effort to achieve goals setout by myself or the company and strive to consistenly meet deadlines with quality work."
       },
       {
-        "emoji": "🍌",
-        "value": "Bananas",
-        "description": "Naturally sweet and potassium-rich fruit. Bananas are a popular choice for their energy-boosting properties and can be enjoyed as a quick snack, added to smoothies, or used in baking."
+        "emoji": "🤔",
+        "value": "Problem Solving and Teamwork",
+        "description":"I excell in challenging environments where I can come up with unique solutions whether it be in a group or solo project"
       },
       {
-        "emoji": "🥦",
-        "value": "Broccoli",
-        "description": "Nutrient-packed green vegetable. Broccoli is packed with vitamins, minerals, and fiber. It has a distinct flavor and can be enjoyed steamed, roasted, or added to stir-fries."
+        "emoji": "💻",
+        "value": "Integrating hardware with cloud services",
+        "description": "I have experience creating a IoT device that can send data to and from the cloud through Microsoft Azure"
+      },
+      {
+        "emoji": "💵",
+        "value":"Toyota Talent and Skills Development Bursary",
+        "description": "Received Toyota South African Motors Talent and Skills Development Bursary for both 2nd and final year."
+      },
+      {
+        "emoji": "🗝️",
+        "value":"Golden Key Society",
+        "description": "Member of Golden Key Society."
+      },
+      {
+        "emoji": "🧑‍🏫",
+        "value":"Mentoring",
+        "description": "Mentor for 3 students as part of Studytrust peer mentorship programme."
+      },
+      {
+        "emoji": "✍️",
+        "value":"SA Taalbond: The Senior Examination",
+        "description": "SA Taalbond; The Senior Examination in Bilingualism A for both English and Afrikaans (Gr.12)."
+      },
+      {
+        "emoji": "✖️➕➖➗",
+        "value":"Udemy: Mathematics for Engineering",
+        "description": "Udemy Certificate of Course Completion for Mathematics for Engineering"
+      },
+      {
+        "emoji": "🌨️",
+        "value":"AZ-900 Certification",
+        "description": "Completed Microsofts Azure Fundamentals AZ-900 Exam"
       }
     ],
 
