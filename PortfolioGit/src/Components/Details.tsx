@@ -1,9 +1,8 @@
 import Accordions from "./Accordion";
 import { FeaturesTitle } from "./FeaturesTitle"
 import { StatsSegments } from "./StatsSegments";
-import Data from '../assets/data.json';
 
-const listItems = Data.achievements;
+//const listItems = Data.achievements;
 
 
 function Details() {
@@ -11,7 +10,7 @@ function Details() {
       <div>
         <FeaturesTitle/>
         <StatsSegments/>
-        <Accordions AccordData={listItems}/>
+        <Accordions/>
         </div>
     )
   }

@@ -1,18 +1,20 @@
 import { Accordion } from '@mantine/core';
 import classes from './Accordion.module.css';
+import { useAppContext } from './AppContext';
 
-interface listDetails {
-    emoji: string;
-    value: string;
-    description: string
-}
+// interface listDetails {
+//     emoji: string;
+//     value: string;
+//     description: string
+// }
 
-interface AccordionProps {
-    AccordData: listDetails[]
-}
+// interface AccordionProps {
+//     AccordData: listDetails[]
+// }
 
-  function Accordions({AccordData} : AccordionProps) {
-    // See groceries data above
+  function Accordions() {
+    const {AccordionProps} = useAppContext();
+    const {AccordData} = AccordionProps;
     const items = AccordData.map((item) => (
       <Accordion.Item key={item.value} value={item.value}>
         <Accordion.Control icon={item.emoji}>{item.value}</Accordion.Control>
