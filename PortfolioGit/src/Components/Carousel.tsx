@@ -5,16 +5,27 @@ import useFetch from "../useFetch";
 
 // Defining the interface for Carousel props
 
+interface CarouselImage {
+  imageUrl: string[];
+}
 
-// interface CarouselProps {
-//   images: string[]; // An array of image URLs to display in the carousel
-// }
+interface CarouselData {
+  id: number;
+  images: CarouselImage[];
+}
 
 // Carousel functional component
 function Carousel() {
-  const [data] = useFetch('http://localhost:5260/Carousel')
+ // const [data] = useFetch('http://localhost:5260/Carousel')
+// Use fetch without modifying the hook
+const [data] = useFetch(`https://localhost:44368/api/Home/carousel/7`);
+console.log("Fetched Data:", data);
 
-const images = data.map((item) => Object.values(item)[1]);
+// Type the data after fetching
+const carouselData = data as CarouselData | undefined; // Ensure correct typing
+
+const images = carouselData?.images.flatMap(img => img.imageUrl) || [];
+  //const images = data.map((item) => Object.values(item)[1]);
 //Map function creates a new array by looping over each item in the given array (in this case data)
 //and applying a given function (everything after =>) to each entry
 //item is essentially just a variable to represent each array entry (like a function argument)
