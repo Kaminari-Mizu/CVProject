@@ -18,8 +18,8 @@ interface CarouselData {
 function Carousel() {
  // const [data] = useFetch('http://localhost:5260/Carousel')
 // Use fetch without modifying the hook
-const [data] = useFetch(`https://localhost:44368/api/Home/carousel/7`);
-console.log("Fetched Data:", data);
+const [data] = useFetch(`https://localhost:44368/api/Home/carousel/2`);
+//console.log("Fetched Data:", data);
 
 // Type the data after fetching
 const carouselData = data as CarouselData | undefined; // Ensure correct typing

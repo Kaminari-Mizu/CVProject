@@ -1,16 +1,46 @@
 import { Container, Grid, SimpleGrid, Group, Text } from '@mantine/core';
 import TimeLine from './TimeLine'; // Importing a custom `TimeLine` component
 import Carousel from './Carousel'; // Importing a custom `Carousel` component
-import Data from '../assets/data.json'; // Importing data from a JSON file
+//import Data from '../assets/data.json'; // Importing data from a JSON file
 import { BadgeCard } from './BadgeCard'; // Importing the reusable `BadgeCard` component
+import useFetch from '../useFetch';
 
+interface Badge {
+  id: number;
+  emoji: string;
+  label: string;
+}
 // The main `Home` component
 function Home() {
   // Extracting the `images` array and `mockdata` object from the imported JSON file
   //const images = Data.images;
-  const detailsCard = Data.detailsdata;
-  const hobbiesCard = Data.hobbiesdata;
-  console.log({detailsCard})
+  // const detailsCard = Data.detailsdata;
+  // const hobbiesCard = Data.hobbiesdata;
+  const [data, loading] = useFetch<{ image: string; title: string; country: string; description: string; badges: Badge[] }>('https://localhost:44368/api/Home/cards/1');
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+
+  // Directly use the data from the API response
+  const detailsCard = data;
+
+  console.log(detailsCard); // Check the detailsCard data
+
+  // Map the detailsCard data
+  const mappedDetailsCard = detailsCard
+    ? {
+        image: detailsCard.image,
+        title: detailsCard.title,
+        country: detailsCard.country,
+        description: detailsCard.description,
+        badges: detailsCard.badges.map(({ id, ...badge }: Badge) => badge),
+        url: "/details",
+      }
+    : undefined;
+
+  console.log(mappedDetailsCard); // Check the mapped data
 
   return (
     // Container to wrap and center the content with padding/margins
@@ -39,10 +69,10 @@ function Home() {
           </Grid.Col>
           {/* Using BadgeCard with data from the JSON file, navigating to different routes */}
           <Grid.Col span={6}>
-            <BadgeCard {...detailsCard} url="/details" />
+           {mappedDetailsCard && <BadgeCard {...mappedDetailsCard} url="/details" />}
           </Grid.Col>
           <Grid.Col span={6}>
-            <BadgeCard {...hobbiesCard} url="/hobbies" />
+            
           </Grid.Col>
         </Grid>
       </SimpleGrid>
