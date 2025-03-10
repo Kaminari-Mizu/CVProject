@@ -16,6 +16,7 @@ Ensure you have the following installed:
 - Node.js (latest LTS version recommended)
 - npm or yarn package manager
 - A running instance of the C# API (if applicable)
+- Various Mantine packages that can be identified within the code
 
 ## Installation
 1. Clone the repository:
